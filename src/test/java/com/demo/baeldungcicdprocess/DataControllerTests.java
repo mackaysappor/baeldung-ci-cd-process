@@ -13,23 +13,23 @@ public class DataControllerTests {
 
     @Test
     void health(){
-        assertEquals("STATUS CHECK OK", dataController.healthCheck());
+        assertEquals("HEALTH CHECK OK", dataController.healthCheck());
     }
 
     @Test
     void version(){
-        assertEquals("Version is 1.0.0", dataController.version());
+        assertEquals("version 1.0.0", dataController.version());
     }
 
     @Test
     void nationsLength(){
         Integer nationsLength = dataController.getRandomNations().size();
-        assertEquals("10", nationsLength);
+        assertEquals(10, nationsLength);
     }
 
     @Test
     void currenciesLength(){
         Integer currenciesLength = dataController.getRandomCurrencies().size();
-        assertEquals("20", currenciesLength);
+        assertEquals(20, currenciesLength);
     }
 }
